@@ -2,6 +2,13 @@ let path = require('path')
 let HtmlWebpackPlugin = require('html-webpack-plugin')
 let CleanWebpackPlugin = require('clean-webpack-plugin')
 let webpack = require('webpack')
+let ExtractTextWebpackPlugin = require('extract-text-webpack-plugin')
+let cssExtract = new ExtractTextWebpackPlugin({
+    filename: 'css/css.css',
+    disable: true
+})
+let PurifycssWebpack = require('purifycss-webpack')
+let glob = require('glob')
 module.exports = {
     entry: './src/index.js', //入口
     output: {
@@ -18,27 +25,20 @@ module.exports = {
     module: {
         rules: [{
                 test: /\.css$/,
-                use: [{
-                    loader: 'style-loader'
-                }, {
-                    loader: 'css-loader'
-                }]
-            },
-            {
-                test: /\.less$/,
-                use: [{
-                        loader: 'style-loader'
-                    }, {
+                use: cssExtract.extract({
+                    fallback: 'style-loader',
+                    use: [{
                         loader: 'css-loader'
-                    },
-                    {
-                        loader: 'less-loader'
-                    }
-                ]
-            }
+                    }]
+                })
+            },
+
         ]
+
     }, //模块设置
     plugins: [
+        //抽离css样式
+        cssExtract,
         //热更新
         new webpack.HotModuleReplacementPlugin(),
         //清空生产的文件夹 清除多个可以是数组        
@@ -54,6 +54,10 @@ module.exports = {
 
             // }
 
+        }),
+        //会消除多余的css，一定在HtmlWebpackPlugin之后
+        new PurifycssWebpack({
+            paths: glob.sync(path.resolve('src/*.html'))
         })
     ], //插件配置
     mode: 'development', //可以更改模式 'development' 和'production'
