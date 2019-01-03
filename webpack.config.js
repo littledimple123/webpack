@@ -3,12 +3,10 @@ let HtmlWebpackPlugin = require('html-webpack-plugin')
 let CleanWebpackPlugin = require('clean-webpack-plugin')
 let webpack = require('webpack')
 let ExtractTextWebpackPlugin = require('extract-text-webpack-plugin')
-let cssExtract = new ExtractTextWebpackPlugin({
-    filename: 'css/css.css',
-    disable: true
-})
-let PurifycssWebpack = require('purifycss-webpack')
+    //1. 引插件
+let CopyWebpackPlugin = require('copy-webpack-plugin')
 let glob = require('glob')
+let PurifyCssPlugin = require('purifycss-webpack')
 module.exports = {
     entry: './src/index.js', //入口
     output: {
@@ -25,20 +23,40 @@ module.exports = {
     module: {
         rules: [{
                 test: /\.css$/,
-                use: cssExtract.extract({
-                    fallback: 'style-loader',
+                use: ExtractTextWebpackPlugin.extract({
                     use: [{
-                        loader: 'css-loader'
-                    }]
+                            loader: 'css-loader'
+                        },
+                        { loader: 'postcss-loader' }
+                    ]
                 })
             },
-
+            {
+                test: /\.less$/,
+                use: ExtractTextWebpackPlugin.extract({
+                    use: [{
+                            loader: 'css-loader'
+                        },
+                        {
+                            loader: 'less-loader'
+                        },
+                        {
+                            loader: 'postcss-loader'
+                        }
+                    ]
+                })
+            }
         ]
-
     }, //模块设置
     plugins: [
-        //抽离css样式
-        cssExtract,
+        new ExtractTextWebpackPlugin({
+            filename: 'css/css.css'
+        }),
+        //2. 直接拷贝不需要打包的文件
+        new CopyWebpackPlugin([{
+            from: './src/doc',
+            to: 'public'
+        }]),
         //热更新
         new webpack.HotModuleReplacementPlugin(),
         //清空生产的文件夹 清除多个可以是数组        
@@ -55,8 +73,7 @@ module.exports = {
             // }
 
         }),
-        //会消除多余的css，一定在HtmlWebpackPlugin之后
-        new PurifycssWebpack({
+        new PurifyCssPlugin({
             paths: glob.sync(path.resolve('src/*.html'))
         })
     ], //插件配置
