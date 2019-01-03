@@ -1,2 +1,2 @@
-module.exports = 'hello worldk2dddddgfgfgfd'
+module.exports = 'hello '
     //console.log('a')

@@ -3,13 +3,14 @@ let HtmlWebpackPlugin = require('html-webpack-plugin')
 let CleanWebpackPlugin = require('clean-webpack-plugin')
 let webpack = require('webpack')
 let ExtractTextWebpackPlugin = require('extract-text-webpack-plugin')
+    //1. 引插件
 let CopyWebpackPlugin = require('copy-webpack-plugin')
 let glob = require('glob')
 let PurifyCssPlugin = require('purifycss-webpack')
 module.exports = {
     entry: './src/index.js', //入口
     output: {
-        filename: '[name][hash:8].js', //修改打包文件名
+        filename: 'build[hash:8].js', //修改打包文件名
         path: path.resolve('./build') //修改打包文件夹的名字,这个路径必须是绝对路径
     }, //出口
     devServer: {
@@ -44,23 +45,6 @@ module.exports = {
                         }
                     ]
                 })
-            },
-            {
-                test: /\.(png|jpg|gif|svg)$/,
-                use: [{
-                    loader: 'url-loader',
-                    options: {
-                        limit: 5000,
-                        outputPath: 'img/',
-                        name: '[name].[ext]?[hash]'
-                    }
-                }]
-            },
-            {
-                test: /\.html$/,
-                use: [{
-                    loader: 'html-withimg-loader'
-                }]
             }
         ]
     }, //模块设置

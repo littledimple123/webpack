@@ -1,11 +1,11 @@
+body {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAoCAYAAACWwljjAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAV5JREFUeNpitLe392RgYJgLxJIMAwueA3Ey0yBxDAPUDXNZkBzDOMAO+g9yCxPDIAOjDhp1EK0ddBiKYez/VMCHKQ0hahcHeM1jIaDZFgd7NA2NOmjEZ/vD1AwhRlpn9UGd7VkGUfJhHM1lQ8lB8kBsR6tsf5gMBy0C4gNALMFCg2xPTjExAYj3APFLRmC/7P8A9jrYgPgvFA94GpIB4qdAvHmwJOrpQCwCxG8Gg4MigdgHiN8DcflAO0gEmohBoATap6dqbU9qNu8DYjEg3gvE82lR25OSO92BOBaIvwFxOtRDA1bb8wDxTCi7HojvDnTV0QqtIs4Acf9A12WWQJwDxL+BOAW5IBwIB4FK49lQu7qA+OJA1/ZVQKwNxDeBuGWgmx8gh1RCcxMoqn4MpINAxcEcaJTNAOIjxDbQYCXlfyphGBAHYgsoO5PYthQTNChf0CCEQGZeJjVUAQIMACJbhOUohxmtAAAAAElFTkSuQmCC) no-repeat;
+}
+
 body #box1 {
   color: yellow;
   font-size: 25px;
   border: 2px solid #ddd;
   -webkit-transform: translate(45deg);
   transform: translate(45deg);
-}
-
-body {
-  background: rgb(211, 146, 146);
 }

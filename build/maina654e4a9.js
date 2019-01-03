@@ -63,7 +63,7 @@
 /******/
 /******/ 	var hotApplyOnUpdate = true;
 /******/ 	// eslint-disable-next-line no-unused-vars
-/******/ 	var hotCurrentHash = "b866ac2379d05b185f8c";
+/******/ 	var hotCurrentHash = "a654e4a969988ea9c1fd";
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule;
@@ -800,7 +800,18 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("module.exports = 'hello worldk2dddddgfgfgfd'\r\n    //console.log('a')\n\n//# sourceURL=webpack:///./src/a.js?");
+eval("module.exports = 'hello '\r\n    //console.log('a')\n\n//# sourceURL=webpack:///./src/a.js?");
+
+/***/ }),
+
+/***/ "./src/img/PSIliru20181108.png":
+/*!*************************************!*\
+  !*** ./src/img/PSIliru20181108.png ***!
+  \*************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("module.exports = \"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAoCAYAAACWwljjAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAV5JREFUeNpitLe392RgYJgLxJIMAwueA3Ey0yBxDAPUDXNZkBzDOMAO+g9yCxPDIAOjDhp1EK0ddBiKYez/VMCHKQ0hahcHeM1jIaDZFgd7NA2NOmjEZ/vD1AwhRlpn9UGd7VkGUfJhHM1lQ8lB8kBsR6tsf5gMBy0C4gNALMFCg2xPTjExAYj3APFLRmC/7P8A9jrYgPgvFA94GpIB4qdAvHmwJOrpQCwCxG8Gg4MigdgHiN8DcflAO0gEmohBoATap6dqbU9qNu8DYjEg3gvE82lR25OSO92BOBaIvwFxOtRDA1bb8wDxTCi7HojvDnTV0QqtIs4Acf9A12WWQJwDxL+BOAW5IBwIB4FK49lQu7qA+OJA1/ZVQKwNxDeBuGWgmx8gh1RCcxMoqn4MpINAxcEcaJTNAOIjxDbQYCXlfyphGBAHYgsoO5PYthQTNChf0CCEQGZeJjVUAQIMACJbhOUohxmtAAAAAElFTkSuQmCC\"\n\n//# sourceURL=webpack:///./src/img/PSIliru20181108.png?");
 
 /***/ }),
 
@@ -815,6 +826,17 @@ eval("// removed by extract-text-webpack-plugin\n\n//# sourceURL=webpack:///./sr
 
 /***/ }),
 
+/***/ "./src/index.html":
+/*!************************!*\
+  !*** ./src/index.html ***!
+  \************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("module.exports = \"<!DOCTYPE html>\\r<html lang=\\\"en\\\">\\r\\r<head>\\r    <meta charset=\\\"UTF-8\\\">\\r    <meta name=\\\"viewport\\\" content=\\\"width=device-width, initial-scale=1.0\\\">\\r    <meta http-equiv=\\\"X-UA-Compatible\\\" content=\\\"ie=edge\\\">\\r    <title>\\r        <%=htmlWebpackPlugin.options.title%>\\r    </title>\\r</head>\\r\\r<body>\\r    <h1 id=\\\"box1\\\">index</h1>\\r    <img src=\"+JSON.stringify(__webpack_require__(/*! ./img/PSIliru20181108.png */ \"./src/img/PSIliru20181108.png\"))+\" />\\r</body>\\r\\r</html>\"\n\n//# sourceURL=webpack:///./src/index.html?");
+
+/***/ }),
+
 /***/ "./src/index.js":
 /*!**********************!*\
   !*** ./src/index.js ***!
@@ -823,7 +845,7 @@ eval("// removed by extract-text-webpack-plugin\n\n//# sourceURL=webpack:///./sr
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _index_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index.css */ \"./src/index.css\");\n/* harmony import */ var _index_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_index_css__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _style_less__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./style.less */ \"./src/style.less\");\n/* harmony import */ var _style_less__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_style_less__WEBPACK_IMPORTED_MODULE_1__);\nvar hy = __webpack_require__(/*! ./a.js */ \"./src/a.js\")\r\n\r\n\r\n\r\nconsole.log(hy)\r\ndocument.getElementById('box1').innerHTML = hy\r\nif (true) {\r\n    module.hot.accept()\r\n}\n\n//# sourceURL=webpack:///./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _index_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index.css */ \"./src/index.css\");\n/* harmony import */ var _index_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_index_css__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _style_less__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./style.less */ \"./src/style.less\");\n/* harmony import */ var _style_less__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_style_less__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _img_PSIliru20181108_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./img/PSIliru20181108.png */ \"./src/img/PSIliru20181108.png\");\n/* harmony import */ var _img_PSIliru20181108_png__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_img_PSIliru20181108_png__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var _index_html__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./index.html */ \"./src/index.html\");\n/* harmony import */ var _index_html__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_index_html__WEBPACK_IMPORTED_MODULE_3__);\nvar hy = __webpack_require__(/*! ./a.js */ \"./src/a.js\")\r\n\r\n\r\n\r\n\r\n\r\nconsole.log(hy)\r\ndocument.getElementById('box1').innerHTML = hy\r\nif (true) {\r\n    module.hot.accept()\r\n}\n\n//# sourceURL=webpack:///./src/index.js?");
 
 /***/ }),
 
